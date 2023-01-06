@@ -2,7 +2,7 @@
 
 ![node-current (scoped)](https://img.shields.io/node/v/?color=informational&style=plastic)
 ![webpack-current](https://img.shields.io/badge/webpack-v5.75.0-informational?style=for-the-badge&&logo=webpack)
-[![GitHub License](https://img.shields.io/github/license/gcolombi/?color=informational&style=for-the-badge)](https://github.com/gcolombi/)
+[![GitHub License](https://img.shields.io/github/license/gcolombi/frontend-webpack-boilerplate?color=informational&style=for-the-badge)](https://github.com/gcolombi/frontend-webpack-boilerplate/blob/master/LICENSE)
 [![barba](https://img.shields.io/badge/barba-v2.9.7-green?style=for-the-badge)](https://github.com/barbajs/barba)
 [![loadx](https://img.shields.io/badge/loadx-v0.1.1-green?style=for-the-badge)](https://github.com/cesarwbr/loadx)
 [![locomotive-scroll](https://img.shields.io/badge/locomotive--scroll-v4.1.4-green?style=for-the-badge)](https://github.com/locomotivemtl/locomotive-scroll)
