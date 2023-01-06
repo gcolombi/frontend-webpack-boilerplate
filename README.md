@@ -1,6 +1,6 @@
 # Frontend webpack boilerplate
 
-![node-current (scoped)](https://img.shields.io/node/v/?color=informational&style=plastic)
+[![node)](https://img.shields.io/badge/node->=14-informational?style=for-the-badge)](https://nodejs.org/)
 ![webpack-current](https://img.shields.io/badge/webpack-v5.75.0-informational?style=for-the-badge&&logo=webpack)
 [![GitHub License](https://img.shields.io/github/license/gcolombi/frontend-webpack-boilerplate?color=informational&style=for-the-badge)](https://github.com/gcolombi/frontend-webpack-boilerplate/blob/master/LICENSE)
 [![barba](https://img.shields.io/badge/barba-v2.9.7-green?style=for-the-badge)](https://github.com/barbajs/barba)
