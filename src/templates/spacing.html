@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js is-loading">
+	<head>
+		<meta charset="utf-8">
+		<title>Spacing</title>
+        <meta name="description" content="Starter project template boilerplate based on Webpack with SASS/SCSS/PostCSS and babel ES6/7 support">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+        <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#38affc">
+        <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#38affc">
+        <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="assets/app.css" media="all">
+	</head>
+    
+    
+	<body data-barba="wrapper">
+        <div class="c-firstLoad">
+            <div class="c-firstLoad__inner"></div>
+        </div>
+        <div class="c-pageTransition">
+            <div class="c-pageTransition__inner"></div>
+        </div>
+        <div 
+            class="js-barba-container" 
+            data-barba="container"
+            data-barba-namespace="default" 
+            data-lang="en"
+        >
+            <nav class="c-navigation">
+                <div class="o-container">
+                    <div class="c-navigation__row">
+                        <div class="c-navigation__btn">
+                            <a href="/" class="c-btn">Home</a>
+                        </div>
+
+                        <ul class="c-navigation__list u-margin--none">
+                            <li class="c-navigation__list--item">
+                                <a href="container.html">Container</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="grid.html">Grid</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="spacing.html">Spacing</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="images.html">Images</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="form.html">Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="o-scroll" data-scroll-container>
+                <main>
+                    <div class="u-spacing--responsive--top" data-scroll-section></div>
+                    <header class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <div class="u-spacing--responsive u-box u-text--center">
+                                <div class="o-wysiwyg">
+                                    <h1>Spacing</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+    
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Spacing css variables</h2>
+                            <p>You can customize the initial, ratio & increment values in <strong>_config.scss</strong>.</p>
+                            <div class="o-wysiwyg">
+                                <ul class="unstyled u-text--center u-bodyColor--white">
+                                    <li class="u-blockColor--secondary" style="padding: var(--spacing-thinner) 0;">--spacing-thinner</li>
+                                    <li class="u-blockColor--secondary" style="padding: var(--spacing-thin) 0;">--spacing-thin</li>
+                                    <li class="u-blockColor--secondary" style="padding: var(--spacing-normal) 0;">--spacing-normal</li>
+                                    <li class="u-blockColor--secondary" style="padding: var(--spacing-large) 0;">--spacing-large</li>
+                                    <li class="u-blockColor--secondary" style="padding: var(--spacing-larger) 0;">--spacing-larger</li>
+                                    <li class="u-blockColor--secondary" style="padding: var(--spacing-responsive) 0;">--spacing-responsive</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Utilities classes</h2>
+                            <ul class="unstyled u-text--center u-bodyColor--white">
+                                <li class="u-blockColor--secondary u-spacing--responsive--top">u-spacing--responsive--top</li>
+                                <li class="u-blockColor--secondary u-spacing--responsive">u-spacing--responsive</li>
+                                <li class="u-blockColor--secondary u-spacing--responsive--bottom">u-spacing--responsive--bottom</li>
+                            </ul>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <script src="assets/app.js" defer></script>
+	</body>
+</html>	

@@ -1,0 +1,176 @@
+/* ==========================================================================
+    Animations / Animations
+========================================================================== */
+
+@import 
+'properties', 
+'types/fade.scss';
+
+/** 
+ * Animations class
+ */
+@mixin make-ml-item() {
+	transition: all $ease-in 0.45s;
+}
+
+.m-ls {
+	.m-ls-item {
+		@include make-ml-item();
+
+		/* translate */
+		&--translate-gentle {
+			@include make-ml-item();
+			transform: translate(0, 25px);
+
+			&.is-inview {
+				transform: translate(0, 0);
+			}
+		}
+
+		&--translate-height-t {
+			@include make-ml-item();
+			transform: translate(0, -100%);
+
+			&.is-inview {
+				transform: translate(0, 0);
+			}
+		}
+
+		&--translate-height-b {
+			@include make-ml-item();
+			transform: translate(0, 100%);
+
+			&.is-inview {
+				transform: translate(0, 0);
+			}
+		}
+		
+		&--translate-width-l {
+			@include make-ml-item();
+			transform: translate(-100%, 0);
+
+			&.is-inview {
+				transform: translate(0, 0);
+			}
+		}
+
+		&--translate-width-r {
+			@include make-ml-item();
+			transform: translate(100%, 0);
+
+			&.is-inview {
+				transform: translate(0, 0);
+			}
+		}
+
+		&--scale {
+			@include make-ml-item();
+			transform: scale(.5);
+
+			&.is-inview {
+				transform: scale(1);
+			}
+		}
+
+		/* opacity */
+		&--opacity {
+			@include make-ml-item();
+			opacity: 0;
+
+			&.is-inview {
+				opacity: 1;
+			}
+		}
+
+		/* delay */
+		&--delay-0 {
+			@include make-ml-item();
+			transition-delay: 0s !important;
+		}
+
+		@for $i from 1 through 10 {
+			&--delay-#{$i} {
+				@include make-ml-item();
+				transition-delay: $i * 0.15s !important;
+			}
+		}
+	}
+
+	&.is-inview {
+		.m-ls-item {
+			&[class*="--translate"] {
+				transform: translate(0, 0);
+			}
+
+			&--scale {
+				transform: scale(1);
+			}
+
+			&--opacity {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/**
+ * Animations class using mixins & keyframes
+ * count        Specifies the number of times an animation is played. Default 1
+ * duration     Specifies how many seconds or milliseconds an animation takes to complete one cycle. Default 0
+ * delay        Specifies when the animation will start. Default 0
+ * function     Describes how the animation will progress over one cycle of its duration. Default "ease"
+ * fill-mode    Specifies if the effects of an animation are before the animation starts and after it ends.
+ * visibility   Determines whether or not a transformed element is visible when it is not facing the screen.
+ */
+.m-ls-anim {
+	transition: none !important;
+
+	&--fade-in {
+		opacity: 0;
+
+		&.is-inview {
+			@include fadeIn(1, .8s, 0.25s, $ease-in);
+		}
+	}
+
+	&--fade-in-down {
+		opacity: 0;
+
+		&.is-inview {
+			@include fadeInDown(1, .8s, 0.25s, $ease-in);
+		}
+	}
+
+	&--fade-in-up {
+		opacity: 0;
+
+		&.is-inview {
+			@include fadeInUp(1, .8s, 0.25s, $ease-in);
+		}
+	}
+
+	&--fade-in-left {
+		opacity: 0;
+
+		&.is-inview {
+			@include fadeInLeft(1, .8s, 0.25s, $ease-in);
+		}
+	}
+
+	&--fade-in-right {
+		opacity: 0;
+
+		&.is-inview {
+			@include fadeInRight(1, .8s, 0.25s, $ease-in);
+		}
+	}
+
+	&--fade-in-scale {
+		opacity: 0;
+		transform: scale(.5);
+
+		&.is-inview {
+			@include fadeInScale(1, .8s, 0.25s, $ease-in);
+		}
+	}
+}

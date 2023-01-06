@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js is-loading">
+	<head>
+		<meta charset="utf-8">
+		<title>Images</title>
+        <meta name="description" content="Starter project template boilerplate based on Webpack with SASS/SCSS/PostCSS and babel ES6/7 support">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+        <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#38affc">
+        <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#38affc">
+        <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="assets/app.css" media="all">
+	</head>
+    
+    
+	<body data-barba="wrapper">
+        <div class="c-firstLoad">
+            <div class="c-firstLoad__inner"></div>
+        </div>
+        <div class="c-pageTransition">
+            <div class="c-pageTransition__inner"></div>
+        </div>
+        <div 
+            class="js-barba-container" 
+            data-barba="container"
+            data-barba-namespace="default" 
+            data-lang="en"
+        >
+            <nav class="c-navigation">
+                <div class="o-container">
+                    <div class="c-navigation__row">
+                        <div class="c-navigation__btn">
+                            <a href="/" class="c-btn">Home</a>
+                        </div>
+
+                        <ul class="c-navigation__list u-margin--none">
+                            <li class="c-navigation__list--item">
+                                <a href="container.html">Container</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="grid.html">Grid</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="spacing.html">Spacing</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="images.html">Images</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="form.html">Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="o-scroll" data-scroll-container>
+                <main>
+                    <div class="u-spacing--responsive--top" data-scroll-section></div>
+                    <header class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <div class="u-spacing--responsive u-box u-text--center">
+                                <div class="o-wysiwyg">
+                                    <h1>Images</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+    
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Lazy Load</h2>
+                            <div class="o-wysiwyg">
+                                <p>Using <a href="https://github.com/verlok/vanilla-lazyload" target="_blank">vanilla-lazyload</a></p>
+                                <p>You must add the classes <strong>o-lazy</strong> & <strong>js-lazy</strong> on the img tag.</p>
+                                <p>An easy way to prevent content reflow from lazy-loaded images is to set the src attribute to an inline svg. The svg viewBox must have the same aspect ratio as your image.</p>
+                            </div>
+                            <div class="u-spacing--responsive--top">
+                                <article class="o-grid o-grid--col2">
+                                    <div>
+                                        <picture>
+                                            <source srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20564%20340'%3E%3C/svg%3E" data-srcset="https://source.unsplash.com/random/564x340?tech" media="(max-width: 1449px)">
+                                            <img class="o-lazy js-lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 790 790'%3E%3C/svg%3E" data-src="https://source.unsplash.com/random/790x790?tech" width="790" height="790" alt="">
+                                        </picture>
+                                    </div>
+                                    <div>
+                                        <picture>
+                                            <source srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20564%20340'%3E%3C/svg%3E" data-srcset="https://source.unsplash.com/random/564x340?tech" media="(max-width: 1449px)">
+                                            <img class="o-lazy js-lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 790 790'%3E%3C/svg%3E" data-src="https://source.unsplash.com/random/790x790?tech" width="790" height="790" alt="">
+                                        </picture>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <script src="assets/app.js" defer></script>
+	</body>
+</html>	

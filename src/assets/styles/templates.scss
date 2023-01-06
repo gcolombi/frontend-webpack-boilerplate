@@ -1,0 +1,48 @@
+/* ==========================================================================
+    Templates
+
+    These styles are only used for the templates
+========================================================================== */
+
+.c-blockTwoCol {
+
+    // **---------------------------------------------------**
+    // MEDIA QUERIES
+    
+    @include mediaq('>MD') {
+        &__row {
+            @include make-row();
+        }
+    
+        &__col {
+            @include make-col-ready();
+            @include make-col(6, 12);
+        }
+    }
+}
+
+.o-grid {
+    display: grid;
+    grid-gap: rem(30px);
+    
+    &--noGutters {
+        grid-gap: 0;
+    }
+
+    // **---------------------------------------------------**
+    // MEDIA QUERIES
+    
+    @include mediaq('>MD') {
+        &--col2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        &--col3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        &--col4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "name": "frontend-webpack-boilerplate",
+    "version": "1.0.0",
+    "description": "Starter project template boilerplate based Webpack with SASS/SCSS/PostCSS and babel ES6/7 support.",
+    "author": "Gérard Colombi",
+    "private": true,
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
+        "watch": "webpack --config configuration/webpack.dev.config.js --mode=development --watch",
+        "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
+        "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
+        "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
+    },
+    "dependencies": {
+        "@barba/core": "^2.9.7",
+        "loadx": "^0.1.1",
+        "locomotive-scroll": "^4.1.4",
+        "vanilla-lazyload": "^17.8.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.18.13",
+        "@babel/preset-env": "^7.18.10",
+        "autoprefixer": "^10.4.8",
+        "babel-loader": "^8.2.5",
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.7.1",
+        "css-minimizer-webpack-plugin": "^4.2.2",
+        "html-webpack-plugin": "^5.5.0",
+        "image-minimizer-webpack-plugin": "^3.3.0",
+        "imagemin": "^8.0.1",
+        "imagemin-gifsicle": "^7.0.0",
+        "imagemin-jpegtran": "^7.0.0",
+        "imagemin-optipng": "^8.0.0",
+        "imagemin-svgo": "^10.0.1",
+        "imagemin-webp": "^7.0.0",
+        "mini-css-extract-plugin": "^2.6.1",
+        "postcss": "^8.4.16",
+        "postcss-loader": "^7.0.1",
+        "sass": "^1.54.8",
+        "sass-loader": "^13.0.2",
+        "terser-webpack-plugin": "^5.2.5",
+        "webpack": "^5.75.0",
+        "webpack-bundle-analyzer": "^4.6.1",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.10.1",
+        "webpack-merge": "^5.8.0"
+    },
+    "engines": {
+        "node": ">=14"
+    },
+    "browserslist": [
+        "> 5%",
+        "last 2 versions"
+    ]
+}

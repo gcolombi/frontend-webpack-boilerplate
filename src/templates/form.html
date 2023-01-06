@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js is-loading">
+	<head>
+		<meta charset="utf-8">
+		<title>Form</title>
+        <meta name="description" content="Starter project template boilerplate based on Webpack with SASS/SCSS/PostCSS and babel ES6/7 support">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+        <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#38affc">
+        <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#38affc">
+        <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="assets/app.css" media="all">
+	</head>
+    
+    
+	<body data-barba="wrapper">
+        <div class="c-firstLoad">
+            <div class="c-firstLoad__inner"></div>
+        </div>
+        <div class="c-pageTransition">
+            <div class="c-pageTransition__inner"></div>
+        </div>
+        <div 
+            class="js-barba-container" 
+            data-barba="container"
+            data-barba-namespace="default" 
+            data-lang="en"
+        >
+            <nav class="c-navigation">
+                <div class="o-container">
+                    <div class="c-navigation__row">
+                        <div class="c-navigation__btn">
+                            <a href="/" class="c-btn">Home</a>
+                        </div>
+
+                        <ul class="c-navigation__list u-margin--none">
+                            <li class="c-navigation__list--item">
+                                <a href="container.html">Container</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="grid.html">Grid</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="spacing.html">Spacing</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="images.html">Images</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="form.html">Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="o-scroll" data-scroll-container>
+                <main>
+                    <div class="u-spacing--responsive--top" data-scroll-section></div>
+                    <header class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <div class="u-spacing--responsive u-box u-text--center">
+                                <div class="o-wysiwyg">
+                                    <h1>Form</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+    
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Form elements</h2>
+                            <div class="o-grid o-grid--col2" style="padding: var(--spacing-thin) 0;">
+                                <h3 class="h2 u-margin--none">Boxed</h3>
+                                <div>&nbsp;</div>
+                                <div>
+                                    <label for="firstname">Firstname</label>
+                                    <div class="c-formElement--boxed">
+                                        <input type="text" id="firstname">
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Placeholder</label>
+                                    <div class="c-formElement c-formElement--boxed">
+                                        <input type="text" id="lastname" placeholder="Lastname">
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="">Select</label>
+                                    <div class="c-formElement--select--boxed">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+                                        <select name="select" id="subject">
+                                            <option selected disabled value="">Choose</option>
+                                            <option value="option 1">option 1</option>
+                                            <option value="option 2">option 2</option>
+                                            <option value="option 3">option 3</option>
+                                        </select>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                    
+                                <div>
+                                    <label for="">Upload</label>
+                                    <div class="c-formElement--upload--boxed">
+                                        <label for="uploadCV">File upload</label>
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z"/></g></svg>
+                                        <input type="file" name="c.v." id="uploadCV" required>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid o-grid--col2" style="padding: var(--spacing-thin) 0;">
+                                <h3 class="h2 u-margin--none">Bordered</h3>
+                                <div>&nbsp;</div>
+                                <div>
+                                    <label for="firstname">Firstname</label>
+                                    <div class="c-formElement--bordered">
+                                        <input type="text" id="firstname">
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Placeholder</label>
+                                    <div class="c-formElement c-formElement--bordered">
+                                        <input type="text" id="lastname" placeholder="Lastname">
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="">Select</label>
+                                    <div class="c-formElement--select--bordered">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+                                        <select name="select" id="subject">
+                                            <option selected disabled value="">Choose</option>
+                                            <option value="option 1">option 1</option>
+                                            <option value="option 2">option 2</option>
+                                            <option value="option 3">option 3</option>
+                                        </select>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="">Upload</label>
+                                    <div class="c-formElement--upload--bordered">
+                                        <label for="uploadCV">File upload</label>
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z"/></g></svg>
+                                        <input type="file" name="c.v." id="uploadCV" required>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid o-grid--col2" style="padding: var(--spacing-thin) 0;">
+                                <h3 class="h2 u-margin--none">Line</h3>
+                                <div>&nbsp;</div>
+                                <div>
+                                    <label>Placeholder</label>
+                                    <div class="c-formElement c-formElement--line">
+                                        <input type="text" id="firstname" placeholder="Firstname">
+                                        <hr>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                    
+                                <div>
+                                    <label>Placeholder</label>
+                                    <div class="c-formElement c-formElement--line">
+                                        <input type="text" id="lastname" placeholder="Lastname">
+                                        <hr>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                    
+                                <div>
+                                    <div class="c-formElement--select--line">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+                                        <select name="select" id="subject">
+                                            <option selected disabled value="">Choose</option>
+                                            <option value="option 1">option 1</option>
+                                            <option value="option 2">option 2</option>
+                                            <option value="option 3">option 3</option>
+                                        </select>
+                                        <hr>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                    
+                                <div>
+                                    <div class="c-formElement--upload--line">
+                                        <label for="uploadCV">File upload</label>
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M7,9l1.41,1.41L11,7.83V16h2V7.83l2.59,2.58L17,9l-5-5L7,9z"/></g></svg>
+                                        <input type="file" name="c.v." id="uploadCV" required>
+                                        <hr>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid o-grid--col2" style="padding: var(--spacing-thin) 0;">
+                                <h3 class="h2 u-margin--none">Textarea</h3>
+                                <div>&nbsp;</div>
+                                <div>
+                                    <label>Placeholder</label>
+                                    <div class="c-formElement c-formElement--boxed">
+                                        <textarea placeholder="Message"></textarea>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Textarea boxed</label>
+                                    <div class="c-formElement--boxed">
+                                        <textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuSMod tempor incididunt.</textarea>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Placeholder</label>
+                                    <div class="c-formElement--bordered">
+                                        <textarea placeholder="Message"></textarea>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Textarea bordered</label>
+                                    <div class="c-formElement--bordered">
+                                        <textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuSMod tempor incididunt.</textarea>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Placeholder</label>
+                                    <div class="c-formElement c-formElement--line">
+                                        <textarea placeholder="Message"></textarea>
+                                        <hr>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Textarea line</label>
+                                    <div class="c-formElement--line">
+                                        <textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</textarea>
+                                        <hr>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid o-grid--col2" style="padding: var(--spacing-thin) 0;">
+                                <h3 class="h2 u-margin--none">Label up</h3>
+                                <div>&nbsp;</div>
+                                <div>
+                                    <label>Boxed</label>
+                                    <div>&nbsp;</div>
+                                    <div class="c-formElement--boxed m-label js-label">
+                                        <label for="firstname">Firstname</label>
+                                        <input type="text" id="firstname">
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Bordered</label>
+                                    <div>&nbsp;</div>
+                                    <div class="c-formElement--bordered m-label js-label">
+                                        <label for="firstname1">Firstname</label>
+                                        <input type="text" id="firstname1">
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Line</label>
+                                    <div>&nbsp;</div>
+                                    <div class="c-formElement--line m-label js-label">
+                                        <label for="firstname2">Firstname</label>
+                                        <input type="text" id="firstname2">
+                                        <hr>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div></div>
+                                <div>
+                                    <label>Boxed</label>
+                                    <div>&nbsp;</div>
+                                    <div class="c-formElement--boxed m-label js-label">
+                                        <label for="boxed">Message</label>
+                                        <textarea id="boxed"></textarea>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Bordered</label>
+                                    <div>&nbsp;</div>
+                                    <div class="c-formElement--bordered m-label js-label">
+                                        <label for="bordered">Message</label>
+                                        <textarea id="bordered"></textarea>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Line</label>
+                                    <div>&nbsp;</div>
+                                    <div class="c-formElement--line m-label js-label">
+                                        <label for="line">Message</label>
+                                        <textarea id="line"></textarea>
+                                        <hr>
+                                        <span class="c-formElement--focusLine"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid o-grid--col2" style="padding: var(--spacing-thin) 0;">
+                                <h3 class="h2 u-margin--none">Checkbox & Radio</h3>
+                                <div>&nbsp;</div>
+                                <div>
+                                    <div class="c-formElement--checkbox">
+                                        <input type="checkbox" id="el-1" placeholder="Texte">
+                                        <label for="el-1">Checkbox</label>
+                                    </div>
+                                    <div class="c-formElement--checkbox">
+                                        <input type="checkbox" id="el-2" placeholder="Texte">
+                                        <label for="el-2">Checkbox</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="c-formElement--checkbox">
+                                        <input type="checkbox" id="el-3" placeholder="Texte" checked>
+                                        <label for="el-3">Checkbox</label>
+                                    </div>
+                                    <div class="c-formElement--checkbox">
+                                        <input type="checkbox" id="el-4" placeholder="Texte" checked>
+                                        <label for="el-4">Checkbox</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="c-formElement--checkboxSvg">
+                                        <input type="checkbox" id="el-5">
+                                        <label for="el-5">
+                                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M 10 10 L 90 90"></path>
+                                                <path d="M 90 10 L 10 90"></path>
+                                            </svg>
+                                            Checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="c-formElement--checkboxSvg">
+                                        <input type="checkbox" checked id="el-6">
+                                        <label for="el-6">
+                                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M 10 10 L 90 90"></path>
+                                                <path d="M 90 10 L 10 90"></path>
+                                            </svg>
+                                            Checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="c-formElement--radio">
+                                        <input type="radio" id="el-7" name="example" placeholder="Texte">
+                                        <label for="el-7">Radio</label>
+                                    </div>
+                                    <div class="c-formElement--radio">
+                                        <input type="radio" id="el-8" name="example" placeholder="Texte">
+                                        <label for="el-8">Radio</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="c-formElement--radio">
+                                        <input type="radio" id="el-9" name="radio_example" placeholder="Texte" checked>
+                                        <label for="el-9">Radio</label>
+                                    </div>
+                                    <div class="c-formElement--radio">
+                                        <input type="radio" id="el-10" name="radio_example" placeholder="Texte">
+                                        <label for="el-10">Radio</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-grid o-grid--col2" style="padding: var(--spacing-thin) 0 0 0;">
+                                <h3 class="h2 u-margin--none">Submit button</h3>
+                                <div>&nbsp;</div>
+                                <div>
+                                    <h4 class="u-headingColor--secondary h6">Standard</h4>
+                                    <div class="c-formElement--submit">
+                                        <button type="submit" class="c-btn">Send</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="u-headingColor--secondary h6">Disabled</h4>
+                                    <div class="c-formElement--submit">
+                                        <button type="submit" class="c-btn disabled">Sending...</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <script src="assets/app.js" defer></script>
+	</body>
+</html>	

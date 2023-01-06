@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js is-loading">
+	<head>
+		<meta charset="utf-8">
+		<title>Frontend Webpack Boilerplate</title>
+        <meta name="description" content="Starter project template boilerplate based on Webpack with SASS/SCSS/PostCSS and babel ES6/7 support">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+        <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#38affc">
+        <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#38affc">
+        <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="assets/app.css" media="all">
+	</head>
+    
+    
+	<body data-barba="wrapper">
+        <div class="c-firstLoad">
+            <div class="c-firstLoad__inner"></div>
+        </div>
+        <div class="c-pageTransition">
+            <div class="c-pageTransition__inner"></div>
+        </div>
+        <div 
+            class="js-barba-container" 
+            data-barba="container"
+            data-barba-namespace="default" 
+            data-lang="en"
+        >
+            <nav class="c-navigation">
+                <div class="o-container">
+                    <div class="c-navigation__row">
+                        <div class="c-navigation__btn">
+                            <a href="/" class="c-btn">Home</a>
+                        </div>
+
+                        <ul class="c-navigation__list u-margin--none">
+                            <li class="c-navigation__list--item">
+                                <a href="container.html">Container</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="grid.html">Grid</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="spacing.html">Spacing</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="images.html">Images</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="form.html">Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="o-scroll" data-scroll-container>
+                <main>
+                    <div class="u-spacing--responsive--top" data-scroll-section></div>
+                    <header class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <div class="u-spacing--responsive u-box u-text--center">
+                                <div class="o-wysiwyg">
+                                    <h1>Frontend Webpack Boilerplate</h1>
+                                    <p>Source code available on <a href="https://github.com/gcolombi/frontend-webpack-boilerplate" target="_blank">Github</a></p>
+                                    <a href="https://nodejs.org/" target="_blank"><img src="https://img.shields.io/node/v/?color=informational&style=for-the-badge" alt="Node version"></a>
+                                    <a href="https://webpack.js.org/" target="_blank"><img src="https://img.shields.io/badge/webpack-v5.74.0-informational?style=for-the-badge&logo=webpack" alt="Webpack version"></a>
+                                    <a href="https://github.com/gcolombi" target="_blank"><img src="https://img.shields.io/github/licence/?color=informational&style=for-the-badge" alt="License"></a><br><br>
+                                    <a href="https://github.com/barbajs/barba" target="_blank"><img src="https://img.shields.io/badge/barba-v2.9.7-green?style=for-the-badge" alt="Barba"></a>
+                                    <a href="https://github.com/cesarwbr/loadx" target="_blank"><img src="https://img.shields.io/badge/loadx-v0.1.1-green?style=for-the-badge" alt="Loadx"></a>
+                                    <a href="https://github.com/locomotivemtl/locomotive-scroll" target="_blank"><img src="https://img.shields.io/badge/locomotive--scroll-v4.1.4-green?style=for-the-badge" alt="Locomotive scroll"></a>
+                                    <a href="https://github.com/verlok/vanilla-lazyload" target="_blank"><img src="https://img.shields.io/badge/vanilla--lazyload-v17.8.3-green?style=for-the-badge" alt="Vanilla lazyload"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+    
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Colors</h2>
+                            <article class="o-grid o-grid--col4">
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">Primary</h3>
+                                    <div class="o-wysiwyg">
+                                        <ul class="u-box u-overflow--hidden">
+                                            <li class=" u-blockColor--primary-lighter u-color--white u-margin--none" style="padding: 1rem;">
+                                                --primary-lighter
+                                            </li>
+                                            <li class="u-blockColor--primary-light u-color--white u-margin--none" style="padding: 1rem;">
+                                                --primary-light
+                                            </li>
+                                            <li class="u-blockColor--primary u-color--white u-margin--none" style="padding: 1rem;">
+                                                --primary
+                                            </li>
+                                            <li class="u-blockColor--primary-dark u-color--white u-margin--none" style="padding: 1rem;">
+                                                --primary-dark
+                                            </li>
+                                            <li class="u-blockColor--primary-darker u-color--white u-margin--none" style="padding: 1rem;">
+                                                --primary-darker
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">Secondary</h3>
+                                    <div class="o-wysiwyg">
+                                        <ul class="u-box u-overflow--hidden">
+                                            <li class="u-blockColor--secondary-lighter u-color--white u-margin--none" style="padding: 1rem;">
+                                                --secondary-lighter
+                                            </li>
+                                            <li class="u-blockColor--secondary-light u-color--white u-margin--none" style="padding: 1rem;">
+                                                --secondary-light
+                                            </li>
+                                            <li class="u-blockColor--secondary u-color--white u-margin--none" style="padding: 1rem;">
+                                                --secondary
+                                            </li>
+                                            <li class="u-blockColor--secondary-dark u-color--white u-margin--none" style="padding: 1rem;">
+                                                --secondary-dark
+                                            </li>
+                                            <li class="u-blockColor--secondary-darker u-color--white u-margin--none" style="padding: 1rem;">
+                                                --secondary-darker
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">Monochromes</h3>
+                                    <div class="o-wysiwyg">
+                                        <ul class="u-box u-overflow--hidden">
+                                            <li class="u-margin--none u-padding--none">
+                                                <div class="o-grid o-grid--noGutters o-grid--col2">
+                                                    <div class="u-blockColor--white u-color--black u-margin--none" style="padding: 1rem;">
+                                                        --white
+                                                    </div>
+                                                    <div class="u-blockColor--black u-color--white u-margin--none" style="padding: 1rem;">
+                                                        --black
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="u-blockColor--gray-100 u-margin--none" style="padding: 1rem;">
+                                                --gray-100
+                                            </li>
+                                            <li class="u-blockColor--gray-200 u-margin--none" style="padding: 1rem;">
+                                                --gray-200
+                                            </li>
+                                            <li class="u-blockColor--gray-300 u-margin--none" style="padding: 1rem;">
+                                                --gray-300
+                                            </li>
+                                            <li class="u-blockColor--gray-400 u-margin--none" style="padding: 1rem;">
+                                                --gray-400
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">&nbsp;</h3>
+                                    <div class="o-wysiwyg">
+                                        <ul class="u-box u-overflow--hidden">
+                                            <li class="u-blockColor--gray-500 u-color--white u-margin--none" style="padding: 1rem;">
+                                                --gray-500
+                                            </li>
+                                            <li class="u-blockColor--gray-600 u-color--white u-margin--none" style="padding: 1rem;">
+                                                --gray-600
+                                            </li>
+                                            <li class="u-blockColor--gray-700 u-color--white u-margin--none" style="padding: 1rem;">
+                                                --gray-700
+                                            </li>
+                                            <li class="u-blockColor--gray-800 u-color--white u-margin--none" style="padding: 1rem;">
+                                                --gray-800
+                                            </li>
+                                            <li class="u-blockColor--gray-900 u-color--white u-margin--none" style="padding: 1rem;">
+                                                --gray-900
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Buttons</h2>
+                            <article class="o-grid o-grid--col2">
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">Standard</h3>
+                                    <a href="#" class="c-btn">c-btn</a>
+                                    <a href="#" class="c-btn--bordered">c-btn--bordered</a>
+                                    <a href="#" class="c-btn--secondary">c-btn--secondary</a>
+                                    <a href="#" class="c-btn--secondary--bordered">c-btn--secondary--bordered</a>
+                                </div>
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">Icons</h3>
+                                    <a href="#" class="c-btn--icon">
+                                        c-btn--icon
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16.616" height="15.41" viewBox="0 0 16.616 15.41">
+                                            <g transform="translate(-529.744 -7925.766)">
+                                                <path d="M2643.346,7525.684h-15.259v-2h15.259Z" transform="translate(-2098.343 408.788)" fill="#fff"/>
+                                                <path d="M2636.242,7534.2l-1.474-1.352,5.824-6.354-5.824-6.354,1.474-1.352,7.063,7.705Z" transform="translate(-2096.945 406.976)" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+    
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Heading</h2>
+                            <article class="o-grid">
+                                <div>
+                                    <h1 class="u-headingColor--black">H1 Lorem ipsum dolor sit amet</h1>
+                                    <h2 class="u-headingColor--black">H2 Aliquam tincidunt mauris eu risus</h2>
+                                    <h3 class="u-headingColor--black">H3 Vestibulum auctor dapibus neque</h3>
+                                    <h4 class="u-headingColor--black">H4 Nunc dignissim risus id metus</h4>
+                                    <h5 class="u-headingColor--black">H5 Cras ornare tristique elit</h5>
+                                    <h6 class="u-headingColor--black">H6 Vivamus vestibulum ntulla nec ante</h6>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Lists</h2>
+                            <article class="o-grid o-grid--col3">
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">ol</h3>
+                                    <div class="o-wysiwyg">
+                                        <ol>
+                                            <li>Lorem ipsum dolor sit</li>
+                                            <li>Aliquam tincidunt mauris</li>
+                                            <li>Vestibulum auctor dapibus</li>
+                                            <li>Nunc dignissim risus</li>
+                                            <li>Cras ornare tristique</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">ul</h3>
+                                    <div class="o-wysiwyg">
+                                        <ul>
+                                            <li>Lorem ipsum dolor sit</li>
+                                            <li>Aliquam tincidunt mauris</li>
+                                            <li>Vestibulum auctor dapibus</li>
+                                            <li>Nunc dignissim risus</li>
+                                            <li>Cras ornare tristique</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="u-headingColor--secondary h6">ul without generic style</h3>
+                                    <div class="o-wysiwyg">
+                                        <ul class="unstyled">
+                                            <li>Lorem ipsum dolor sit</li>
+                                            <li>Aliquam tincidunt mauris</li>
+                                            <li>Vestibulum auctor dapibus</li>
+                                            <li>Nunc dignissim risus</li>
+                                            <li>Cras ornare tristique</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>					
+                        </div>
+                    </section>
+                    
+                    <section class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <h2>Wysiwyg</h2>
+                            <article class="o-grid">
+                                <div>
+                                    <div class="o-wysiwyg">
+                                        <h2>H2 Doloremque veritatis, accusamus reprehenderit.</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur <strong>strong</strong> similique. Repudiandae molestiae fugiat voluptatibus aperiam sint similique cupiditate totam inventore quo eum. Est obcaecati neque <a href="#">anchor</a> quaerat consequatur. Sapiente iste molestias provident.</p>
+                                        <ul>
+                                            <li>Lorem ipsum dolor sit</li>
+                                            <li>Aliquam tincidunt mauris</li>
+                                            <li>Vestibulum auctor dapibus</li>
+                                            <li>Nunc dignissim risus</li>
+                                            <li>Cras ornare tristique</li>
+                                        </ul>
+                                        <h3>H3 Integer vitae libero ac risus egestas placerat.</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur <strong>strong</strong> similique. Repudiandae molestiae fugiat voluptatibus aperiam sint similique cupiditate totam inventore quo eum. Est obcaecati neque <a href="#">anchor</a> quaerat consequatur. Sapiente iste molestias provident.</p>
+                                        <ol>
+                                            <li>Lorem ipsum dolor sit</li>
+                                            <li>Aliquam tincidunt mauris</li>
+                                            <li>Vestibulum auctor dapibus</li>
+                                            <li>Nunc dignissim risus</li>
+                                            <li>Cras ornare tristique</li>
+                                        </ol>
+                                        <h4>H4 Vestibulum commodo felis quis tortor.</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur <strong>strong</strong> similique. Repudiandae molestiae fugiat voluptatibus aperiam sint similique cupiditate totam inventore quo eum. Est obcaecati neque <a href="#">anchor</a> quaerat consequatur. Sapiente iste molestias provident.</p>
+                                        <h5>H5 Donec quis dui at dolor tempor interdum.</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur <strong>strong</strong> similique. Repudiandae molestiae fugiat voluptatibus aperiam sint similique cupiditate totam inventore quo eum. Est obcaecati neque <a href="#">anchor</a> quaerat consequatur. Sapiente iste molestias provident.</p>
+                                        <h6>H6 Integer vitae libero ac risus egestas placerat.</h6>
+                                    </div>
+                                </div>
+                            </article>					
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <script src="assets/app.js" defer></script>
+	</body>
+</html>	

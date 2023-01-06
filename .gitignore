@@ -1,0 +1,35 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Custom
+.env
+composer.lock
+dist/
+
+# Package manager
+package-lock.json
+yarn.lock
+
+# Dependency packages files
+node_modules/
+
+# Mac OS X
+.DS_Store
+.DS_Store?
+._.*
+._*
+
+# Windows
+Thumbs.db
+
+# Ignore local editor
+.project
+.settings
+.idea
+*.swp
+tags
+nbproject/*
+
+# Debugging related
+npm-debug.log
+yarn-debug.log
+yarn-error.log

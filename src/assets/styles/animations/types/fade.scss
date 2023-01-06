@@ -1,0 +1,140 @@
+/* ==========================================================================
+    Animations / Types / Fade
+========================================================================== */
+
+/* Fade In
+========================================================================== */
+
+@include keyframes(fadeIn) {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@mixin fadeIn($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeIn);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+
+/* Fade In Down
+========================================================================== */
+
+@include keyframes(fadeInDown) {
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@mixin fadeInDown($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeInDown);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+
+/* Fade In Up
+========================================================================== */
+
+@include keyframes(fadeInUp) {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@mixin fadeInUp($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeInUp);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+
+/* Fade In Left
+========================================================================== */
+
+@include keyframes(fadeInLeft) {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@mixin fadeInLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeInLeft);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+
+
+/* Fade In Right
+========================================================================== */
+
+@include keyframes(fadeInRight) {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@mixin fadeInRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeInRight);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+
+/* Fade In Scale
+========================================================================== */
+
+@include keyframes(fadeInScale) {
+	0% {
+		opacity: 0;
+        transform: scale(.5);
+	}
+	100% {
+        opacity: 1;
+        transform: scale(1);
+	}
+}
+@mixin fadeInScale($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(fadeInScale);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js is-loading">
+	<head>
+		<meta charset="utf-8">
+		<title>Grid</title>
+        <meta name="description" content="Starter project template boilerplate based on Webpack with SASS/SCSS/PostCSS and babel ES6/7 support">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+        <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#38affc">
+        <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#38affc">
+        <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="assets/app.css" media="all">
+	</head>
+    
+    
+	<body data-barba="wrapper">
+        <div class="c-firstLoad">
+            <div class="c-firstLoad__inner"></div>
+        </div>
+        <div class="c-pageTransition">
+            <div class="c-pageTransition__inner"></div>
+        </div>
+        <div 
+            class="js-barba-container" 
+            data-barba="container"
+            data-barba-namespace="default" 
+            data-lang="en"
+        >
+            <nav class="c-navigation">
+                <div class="o-container">
+                    <div class="c-navigation__row">
+                        <div class="c-navigation__btn">
+                            <a href="/" class="c-btn">Home</a>
+                        </div>
+
+                        <ul class="c-navigation__list u-margin--none">
+                            <li class="c-navigation__list--item">
+                                <a href="container.html">Container</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="grid.html">Grid</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="spacing.html">Spacing</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="images.html">Images</a>
+                            </li>
+                            <li class="c-navigation__list--item">
+                                <a href="form.html">Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="o-scroll" data-scroll-container>
+                <main>
+                    <div class="u-spacing--responsive--top" data-scroll-section></div>
+                    <header class="u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <div class="u-spacing--responsive u-box u-text--center">
+                                <div class="o-wysiwyg">
+                                    <h1>Grid</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+    
+                    <section class="c-blockTwoCol u-spacing--responsive" data-scroll-section>
+                        <div class="o-container">
+                            <p>You can customize the grid values in <strong>_config.scss</strong>.</p>
+                            <p>Wrap the columns with <strong>o-row</strong> class or use the mixin <strong>@include make-row()</strong>.</p>
+                            <p>Set <strong>$activate-grid-classes</strong> to true in <strong>_config.scss</strong> in order to auto-generate classes or use the mixins like the example below.</p>
+                            <div class="c-blockTwoCol__row">
+                                <div class="c-blockTwoCol__col">
+                                    <div class="o-wysiwyg u-blockColor--secondary u-bodyColor--white" style="padding: var(--spacing-thinner)">
+                                        <p>1 of 2</p>
+                                        <p>@include make-col-ready()</p>
+                                        <p>@include make-col(6, 12)</p>
+                                    </div>
+                                </div>
+                                <div class="c-blockTwoCol__col">
+                                    <div class="o-wysiwyg u-blockColor--secondary u-bodyColor--white" style="padding: var(--spacing-thinner)">
+                                        <p>2 of 2</p>
+                                        <p>&nbsp;</p>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <script src="assets/app.js" defer></script>
+	</body>
+</html>	

@@ -1,0 +1,34 @@
+/* ==========================================================================
+    Animations / Firstload
+========================================================================== */
+
+/* c-firstLoad
+========================================================================== */
+
+.c-firstLoad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary);
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity $ease-in 0.45s;
+    cursor: wait;
+
+    @at-root {
+
+        .is-loading & {
+            overflow: hidden;
+        }
+        
+        .is-loading & {
+            opacity: 1;
+        }
+
+        .is-first-loaded & {
+            pointer-events: none;
+        }
+    }
+}
