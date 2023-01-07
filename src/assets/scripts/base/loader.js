@@ -123,6 +123,6 @@ export default class Loader {
             return `//${window.location.host}/assets/${filename}`;
         }
         /* else root */
-        return `//${window.location.host}${assetsPath}/${filename}`;
+        return `//${window.location.host}/assets/${filename}`;
     }
 }
