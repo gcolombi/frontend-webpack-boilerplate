@@ -49,14 +49,14 @@
 
 Yarn
 ```sh 
-git clone ... project-name
+git clone git@github.com:gcolombi/frontend-webpack-boilerplate.git project-name
 cd project-name
 yarn install
 ```
 
 NPM
 ```sh 
-git clone ... project-name
+git clone git@github.com:gcolombi/frontend-webpack-boilerplate.git project-name
 cd project-name
 npm install
 ```
