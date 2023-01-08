@@ -81,7 +81,7 @@ Update the following files to suit your project:
 * _SASS/SCSS/PostCSS_: `src/assets/styles/`
 * _JavaScript_: `src/assets/scripts/`
 * _Image_: `src/assets/images/`
-* _Font_: `src/assets/fonts/`
+* _Fonts_: `src/assets/fonts/`
 * _HTML_: `src/templates/`
     * It will **automatically** build **all HTML files** placed under `src/templates/` in dist directory.
 
