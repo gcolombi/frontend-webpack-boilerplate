@@ -21,7 +21,7 @@ module.exports = merge(webpackConfiguration, {
         client: {
             overlay: true,
         },
-        // open: true,
+        open: true,
         historyApiFallback: true,
         compress: true,
         hot: false,
