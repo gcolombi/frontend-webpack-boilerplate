@@ -65,12 +65,12 @@ Replace the original remote repository with your project's repository.
 
 Update the following files to suit your project:
 
-* [`README.md`](https://github.com/gcolombi)
-* [`package.json`](https://github.com/gcolombi):
+* [`README.md`](https://github.com/gcolombi/frontend-webpack-boilerplate/blob/master/README.md)
+* [`package.json`](https://github.com/gcolombi/frontend-webpack-boilerplate/blob/master/package.json):
     * name: `frontend-webpack-boilerplate`
     * description: `Starter project template boilerplate ...`
     * author: `Gérard Colombi`
-* [`site.webmanifest`](https://github.com/gcolombi)
+* [`site.webmanifest`](https://github.com/gcolombi/frontend-webpack-boilerplate/blob/master/src/assets/images/favicons/site.webmanifest)
     * name: `Frontend webpack boilerplate`
     * short_name: `Boilerplate`
 

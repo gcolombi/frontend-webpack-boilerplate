@@ -1,7 +1,7 @@
 {
     "name": "frontend-webpack-boilerplate",
     "version": "1.0.0",
-    "description": "Starter project template boilerplate based Webpack with SASS/SCSS/PostCSS and babel ES6/7 support.",
+    "description": "Starter project template boilerplate based on Webpack with SASS/SCSS/PostCSS and babel ES6/7 support.",
     "author": "Gérard Colombi",
     "private": true,
     "license": "MIT",
