@@ -84,6 +84,30 @@ Update the following files to suit your project:
 * _Fonts_: `src/assets/fonts/`
 * _HTML_: `src/templates/`
     * It will **automatically** build **all HTML files** placed under `src/templates/` in dist directory.
+```
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📂fonts
+ ┃ ┣ 📂images
+ ┃ ┃ ┣ 📂favicons
+ ┃ ┃ ┣ 📂svg
+ ┃ ┃ ┗ 📜nature.jpg
+ ┃ ┣ 📂scripts
+ ┃ ┃ ┣ 📂base
+ ┃ ┃ ┣ 📂modules
+ ┃ ┃ ┣ 📂utils
+ ┃ ┃ ┣ 📜app.js
+ ┃ ┃ ┣ 📜lifecycle.js
+ ┃ ┃ ┗ 📜store.js
+ ┃ ┗ 📂styles
+ ┗📂templates
+   ┣ 📜container.html
+   ┣ 📜form.html
+   ┣ 📜grid.html
+   ┣ 📜images.html
+   ┣ 📜index.html
+   ┗ 📜spacing.html
+ ```
 
 ## Build/Compile Assets
 
@@ -144,6 +168,27 @@ npm run production
 * _Images_: `dist/assets/images/`
 * _Fonts_: `dist/assets/fonts/`
 * _HTML_: `dist/`
+
+```
+📦dist
+ ┣ 📂assets
+ ┃ ┣ 📂fonts
+ ┃ ┣ 📂images
+ ┃ ┃ ┣ 📂favicons
+ ┃ ┃ ┣ 📂svg
+ ┃ ┃ ┣ 📂webp
+ ┃ ┃ ┗ 📜nature.jpg
+ ┃ ┣ 📜app.css
+ ┃ ┣ 📜app.js
+ ┃ ┣ 📜example.js
+ ┃ ┗ 📜forminput.js
+ ┣ 📜container.html
+ ┣ 📜form.html
+ ┣ 📜grid.html
+ ┣ 📜images.html
+ ┣ 📜index.html
+ ┗ 📜spacing.html
+ ```
 
 # Additional Tool
 
