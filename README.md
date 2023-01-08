@@ -21,8 +21,8 @@
 ## Features
 
 * Uses [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll) for detection of elements in viewport & smooth scrolling with parallax effects.
-* Uses [Barba](https://github.com/barbajs/barba) for create fluid and smooth transitions between your website's pages.
-* Uses [Vanilla lazyload](https://github.com/verlok/vanilla-lazyload) for speeds up your web application by deferring the loading of your below-the-fold images.
+* Uses [Barba](https://github.com/barbajs/barba) to create fluid and smooth transitions between your website's pages.
+* Uses [Vanilla lazyload](https://github.com/verlok/vanilla-lazyload) to speed up your web application by deferring the loading of your below-the-fold images.
 * **CSS architecture** containing generic and base style, custom configuration, grid, utilities, mixins etc.
 * **Dynamic javascript modules** rendering (example.js file as a reference).
 * Configuration per **environment**
