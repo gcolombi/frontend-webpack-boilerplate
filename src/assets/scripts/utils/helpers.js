@@ -8,9 +8,9 @@ export function isDev() {
 	const host = window.location.hostname
 
 	if(host.indexOf('.test') || host.indexOf('localhost') || host.indexOf('.local'))
-        return true
+        return true;
 
-	return false
+	return false;
 }
 
 /**
