@@ -122,6 +122,7 @@ export default class Loader {
         if (window.location.hostname == 'localhost') {
             return `//${window.location.host}/assets/${filename}`;
         }
+        
         /* else root */
         return `//${window.location.host}/assets/${filename}`;
     }
