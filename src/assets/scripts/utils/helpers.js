@@ -1,4 +1,4 @@
-import loadx from 'loadx'
+import loadx from 'loadx';
 
 /**
  * Gets transition end event name
