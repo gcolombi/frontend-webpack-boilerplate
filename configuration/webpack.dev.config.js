@@ -21,7 +21,8 @@ module.exports = merge(webpackConfiguration, {
         client: {
             overlay: true,
         },
-        open: true,
+        /* Tells dev-server to open the browser after server had been started. Set it to true to open your default browser. */
+        // open: true,
         historyApiFallback: true,
         compress: true,
         hot: false,
