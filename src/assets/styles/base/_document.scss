@@ -32,7 +32,7 @@
 	/* Typography */
 	--font-base: #{$font-base};
 	--font-line-height: 1.3;
-	
+
     /* Heading */
 	--h1: 35px;
 	--h2: 30px;
@@ -41,7 +41,7 @@
 	--h5: 22px;
 	--h6: 18px;
 	--font-heading: var(--font-secondary);
-	--font-heading-weight: var(--font-bold);
+	--font-heading-weight: var(--font-regular);
 	--font-heading-line-height: 1.05;
 
 	/* Alert */
@@ -160,7 +160,7 @@ ul, ol {
 		padding-left: 24px;
 	}
 
-	li { 
+	li {
 		color: var(--body-text-color);
 		margin-bottom: 0.4em;
 		padding-bottom: 0.4em;
