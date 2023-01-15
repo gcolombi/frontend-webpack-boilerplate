@@ -29,14 +29,14 @@
     * `development` - [`sourcemaps`](https://webpack.js.org/configuration/devtool/), [`browser synced developmentment server`](https://webpack.js.org/configuration/dev-server/)
     * `production` - [`minification`](https://webpack.js.org/plugins/terser-webpack-plugin/), [`sourcemaps`](https://webpack.js.org/configuration/devtool/)
 * The built CSS / JavaScript files will respect the **configured supported browser versions** using the following tools:
-    * [`autoprefixer`](https://github.com/postcss/autoprefixer) - automatically adds vendor prefixes to CSS rules
+    * [`autoprefixer`](https://github.com/postcss/autoprefixer) - automatically adds vendor prefixes to CSS rules.
     * [`babel-preset-env`](https://babeljs.io/docs/en/babel-preset-env) - smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (*and optionally, browser polyfills*) are needed by your target environment(s).
 * Support for **assets optimization** for production environment with ability to configure:
     * **Code Minification** of *JavaScript* and *CSS* processed files.
     * **Optimize Assets Loading** - inline and embed **images** / **fonts** files having file size below a *configurable* threshold value.
 * Latest [Webpack 5](https://github.com/webpack/webpack) - *JavaScript* module bundler.
 * Latest [SASS/PostCSS](https://github.com/sass/sass) compiler based on Dart `sass`.
-* Latest [Babel 7](https://github.com/babel/babel) JavaScript compiler
+* Latest [Babel 7](https://github.com/babel/babel) JavaScript compiler.
 * Configured and ready to use **Webpack Dev Server** plugin for faster local development - [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/)
 * Integration with [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) - _Visualize size of webpack output files with an interactive zoomable treemap._
 
@@ -84,6 +84,7 @@ Update the following files to suit your project:
 * _Fonts_: `src/assets/fonts/`
 * _HTML_: `src/templates/`
     * It will **automatically** build **all HTML files** placed under `src/templates/` in dist directory.
+    
 ```
 📦src
  ┣ 📂assets
