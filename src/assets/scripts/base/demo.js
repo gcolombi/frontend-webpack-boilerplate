@@ -12,7 +12,7 @@
 
         if (!demo)
             return false;
-        
+
         console.log(demo);
     }
 }

@@ -192,5 +192,5 @@ class Lifecycle {
         return console.warn('No site container or default language was found. theContainer and lang wont be available in the Store');
     }
 }
- 
+
 export const lifecycle = new Lifecycle();
