@@ -2,6 +2,28 @@
     Tools / Mixins / Form
 ========================================================================== */
 
+@mixin default-styles() {
+    --form-element-padding: 15px;
+	--form-element-margin: 35px;
+
+    position: relative;
+	margin-bottom: var(--form-element-margin);
+
+    &--focusLine {
+		display: inline-block;
+		position: absolute;
+		top: -1px;
+		right: -1px;
+		bottom: -1px;
+		left: -1px;
+		z-index: 100;
+		pointer-events: none;
+		border: 1px solid;
+		border-color: transparent;
+		transition: border-color .35s $ease-in;
+	}
+}
+
 @mixin input-placeholder($font-size, $line-height, $color) {
 	::-webkit-input-placeholder {
 		color: $color;
@@ -84,10 +106,15 @@
 			background: var(--white);
 			border: 1px solid lighten($primary, 25%);
 			border-radius: 2px;
-			height: 1.1em; 
+			height: 1.1em;
 			width: 1.1em;
-		} 
+		}
 	}
+}
+
+@mixin bordered-styles() {
+    background: transparent;
+    outline: 1px solid var(--gray-700);
 }
 
 @mixin label-up() {

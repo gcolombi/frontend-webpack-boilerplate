@@ -2,45 +2,24 @@
     Base / Form
 ========================================================================== */
 
-:root {
-	--form-element-padding: 15px;
-	--form-element-margin: 25px;
-}
-
 .c-formElement {
-	@include input-placeholder(inherit, inherit, var(--gray-500));
-	margin-bottom: var(--form-element-margin);
+    @include default-styles();
+    @include label-up();
 
-	input {
-		@include input-reset();
-	}
+    &:not(.c-formElement--upload--boxed, .c-formElement--upload--bordered, .c-formElement--upload--line) {
+        @include input-placeholder(inherit, inherit, var(--gray-500));
 
-	&--focusLine {
-		display: inline-block;
-		position: absolute;
-		top: -1px;
-		right: -1px;
-		bottom: -1px;
-		left: -1px;
-		z-index: 100;
-		pointer-events: none;
-		border: 1px solid;
-		border-color: transparent;
-		transition: border-color .35s $ease-in;
-	}
+        input {
+            @include input-reset();
+        }
+    }
+
 
 	/* Input
     ========================================================================== */
 
 	&--boxed {
-		position: relative;
 		background: var(--gray-200);
-		margin-bottom: var(--form-element-margin);
-		@include label-up();
-
-		input {
-			@include input-reset();
-		}
 
 		/* Colored line on focus */
 		input:focus ~ .c-formElement--focusLine {
@@ -49,15 +28,7 @@
 	}
 
 	&--bordered {
-		position: relative;
-		background: transparent;
-		margin-bottom: var(--form-element-margin);
-		outline: 1px solid var(--gray-700);
-		@include label-up();
-
-		input {
-			@include input-reset();
-		}
+        @include bordered-styles();
 
 		/* Colored line on focus */
 		input:focus ~ .c-formElement--focusLine {
@@ -66,10 +37,7 @@
 	}
 
 	&--line {
-		position: relative;
 		background: transparent;
-		margin-bottom: var(--form-element-margin);
-		@include label-up();
 
 		&.m-label {
 			label {
@@ -78,7 +46,6 @@
 		}
 
 		input {
-			@include input-reset();
 			padding-left: 0;
 		}
 
@@ -115,9 +82,7 @@
 
 	&--select {
 		&--boxed {
-			position: relative;
 			background: var(--gray-200);
-			margin-bottom: var(--form-element-margin);
 
 			svg {
 				position: absolute;
@@ -149,12 +114,9 @@
 				border-color: var(--secondary);
 			}
 		}
-		
+
 		&--bordered {
-			position: relative;
-			background: transparent;
-			outline: 1px solid var(--gray-700);
-			margin-bottom: var(--form-element-margin);
+            @include bordered-styles();
 
 			svg {
 				position: absolute;
@@ -188,9 +150,6 @@
 		}
 
 		&--line {
-			position: relative;
-			margin-bottom: var(--form-element-margin);
-
 			svg {
 				position: absolute;
 				top: 50%;
@@ -262,9 +221,7 @@
 		}
 
 		&--boxed {
-			position: relative;
 			background: var(--gray-200);
-			margin-bottom: var(--form-element-margin);
 
 			svg {
 				position: absolute;
@@ -296,10 +253,7 @@
 		}
 
 		&--bordered {
-			position: relative;
-			background: transparent;
-			outline: 1px solid var(--gray-700);
-			margin-bottom: var(--form-element-margin);
+            @include bordered-styles();
 
 			svg {
 				position: absolute;
@@ -331,9 +285,7 @@
 		}
 
 		&--line {
-			position: relative;
 			background: transparent;
-			margin-bottom: var(--form-element-margin);
 
 			svg {
 				position: absolute;
@@ -401,7 +353,7 @@
 			width: 100%;
 		}
 	}
-	
+
 	&--boxed, &--bordered {
 		textarea {
 			padding: var(--form-element-padding);
@@ -413,13 +365,13 @@
 			border-color: var(--secondary);
 		}
 	}
-	
+
 	&--line {
 		textarea {
 			padding: var(--form-element-padding) 0 0 0;
 			min-height: 51px;
 		}
-		
+
 		/* Colored line on focus */
 		textarea:focus ~ .c-formElement--focusLine {
 			width: 100%;
@@ -463,7 +415,7 @@
 		input:checked ~ label svg path {
 			stroke-dashoffset: 0;
 		}
-		
+
 		label {
 			position: relative;
 			display: flex;
@@ -471,10 +423,10 @@
 			margin-bottom: 0;
 			cursor: pointer;
 		}
-		
+
 		input ~ label svg {
 			width: 1.1em;
-			height: 1.1em; 
+			height: 1.1em;
 			border: 1px solid var(--primary);
 			margin-right: 10px;
 		}
