@@ -114,7 +114,7 @@
 
 @mixin bordered-styles() {
     background: transparent;
-    outline: 1px solid var(--gray-700);
+    border: 1px solid var(--gray-700);
 }
 
 @mixin label-up() {
