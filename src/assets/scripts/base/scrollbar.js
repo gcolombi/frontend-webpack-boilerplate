@@ -63,8 +63,8 @@ export default class Scrollbar {
 			}
 		});
 
-        this.element.on('call', (value, way) => {
-            // console.log(value, way);
+        this.element.on('call', (value, way, element) => {
+            // console.log(value, way, element);
         });
 	}
 
@@ -119,7 +119,7 @@ export default class Scrollbar {
 	scrollTo(target, options = {}) {
 		this.element.scrollTo(target, options);
 	}
-	
+
     /**
      * Scrolls to top
      */
@@ -140,10 +140,10 @@ export default class Scrollbar {
 			const anchorHref = anchor.href;
 			const anchor_url = new URL(anchorHref);
 			const anchor_hash = anchor_url.hash;
-	
+
 			if (anchor_hash) {
 				const target = window.Store.environment.theBody.querySelector(anchor_hash);
-	
+
 				if (target) {
 					anchor.addEventListener('click', (e) => {
 						e.preventDefault();
