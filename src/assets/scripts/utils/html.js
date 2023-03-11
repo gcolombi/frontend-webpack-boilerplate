@@ -2,7 +2,7 @@
  * Gets parent element by classname
  * @param {*} from HTML DOM Element
  * @param {string} term classname searched e.g. 'js-element'
- * @returns {object} Element object
+ * @returns {Object} Element object
  */
  export function getParentByClassName(from, term) {
 	let parent = from?.parentElement;
@@ -26,7 +26,7 @@
 			}
 		}
 	}
-	
+
 	return parent;
 }
 
@@ -34,7 +34,7 @@
  * Gets the next sibling element
  * @param {*} element HTML DOM Element
  * @param {*} selector classname searched e.g. '.js-element'
- * @returns {object} Element object
+ * @returns {Object} Element object
  */
  export function getNextSibling(element, selector) {
 	let sibling = element?.nextElementSibling;

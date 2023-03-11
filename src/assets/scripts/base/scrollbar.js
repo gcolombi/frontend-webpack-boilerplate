@@ -197,7 +197,7 @@ export default class Scrollbar {
 
 	/**
 	 * Returns scroll & screen values
-	 * @returns {object} object containing scroll and screen values
+	 * @returns {Object} object containing scroll and screen values
 	 */
 	get world() {
 		return {
@@ -210,7 +210,7 @@ export default class Scrollbar {
 
 	/**
 	 * Returns scroll directions
-	 * @returns {object} object containing scroll directions
+	 * @returns {Object} object containing scroll directions
 	 */
 	get directions() {
 		return {
