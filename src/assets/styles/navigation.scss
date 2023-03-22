@@ -11,6 +11,17 @@
         align-items: center;
     }
 
+    &__logo {
+        position: relative;
+        line-height: 0;
+        padding-right: 15px;
+
+        a {
+            display: block;
+            width: rem(35px);
+        }
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -29,7 +40,7 @@
 
     // **---------------------------------------------------**
     // MEDIA QUERIES
-    
+
     @include mediaq('>MD') {
         &__list {
             flex-wrap: wrap;
