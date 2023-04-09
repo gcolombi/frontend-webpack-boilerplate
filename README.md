@@ -92,7 +92,7 @@ Update the following files to suit your project:
  ┃ ┣ 📂images
  ┃ ┃ ┣ 📂favicons
  ┃ ┃ ┣ 📂svg
- ┃ ┃ ┗ 📜nature.jpg
+ ┃ ┃ ┗ 📜example.jpg
  ┃ ┣ 📂scripts
  ┃ ┃ ┣ 📂base
  ┃ ┃ ┣ 📂modules
@@ -178,7 +178,7 @@ npm run production
  ┃ ┃ ┣ 📂favicons
  ┃ ┃ ┣ 📂svg
  ┃ ┃ ┣ 📂webp
- ┃ ┃ ┗ 📜nature.jpg
+ ┃ ┃ ┗ 📜example.jpg
  ┃ ┣ 📜app.css
  ┃ ┣ 📜app.js
  ┃ ┣ 📜example.js
