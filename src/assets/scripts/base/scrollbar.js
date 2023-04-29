@@ -59,6 +59,7 @@ export default class Scrollbar {
 
 				/* Put your code that needs to be watch here */
     			loadRecaptcha();
+                window.Store.navigation?.watch(this.y);
 
 			}
 		});

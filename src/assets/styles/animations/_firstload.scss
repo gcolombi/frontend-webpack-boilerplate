@@ -18,11 +18,10 @@
     cursor: wait;
 
     @at-root {
-
-        .is-loading & {
+        .is-loading {
             overflow: hidden;
         }
-        
+
         .is-loading & {
             opacity: 1;
         }

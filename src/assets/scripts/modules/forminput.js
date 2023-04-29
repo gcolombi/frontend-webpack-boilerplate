@@ -29,10 +29,10 @@ export default class FormInput {
                 FormInput.checkInput(e.target);
             });
 
-            FormInput.checkInput(input);
+            input.addEventListener('change', (e) => {
+                FormInput.checkInput(e.target);
+            });
         });
-
-        FormInput.addGlobalEventListener();
     }
 
     /**
@@ -51,40 +51,9 @@ export default class FormInput {
             parent.classList.toggle(FormInput.params.settings.css_class.up, input.value.length);
         }
     }
-
-    /**
-     * Checks autofill
-     */
-    static initCheckAutofill() {
-        FormInput.addGlobalEventListener('blur', function (target) {
-            /* setTimeout needed for Chrome as it fills other form fields a little later */
-            window.setTimeout(() => {
-                FormInput.checkInput(target);
-            }, 20);
-        });
-    }
-
-    /**
-     * Adds a global event listener
-     * @param {string} eventType string representing the event type to listen for
-     * @param {Function} listener event listener callback
-     */
-    static addGlobalEventListener(eventType, listener) {
-        if (!document.body.addEventListener) {
-            document.body.attachEvent(eventType, onEvent);
-        } else {
-            document.body.addEventListener(eventType, onEvent, true);
-        }
-
-        function onEvent(e) {
-            const target = e.target;
-            listener(target);
-        }
-    }
 }
 
 function render() {
-    FormInput.initCheckAutofill();
     FormInput.init();
 }
 

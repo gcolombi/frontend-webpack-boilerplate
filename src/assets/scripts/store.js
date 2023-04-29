@@ -30,7 +30,7 @@ export default class Store {
 
         /**
          * Add a key that contains needed primary element and loading status for each module
-         * e.g. 
+         * e.g.
          * example: {
          *   selector: '.js-example',
          *   loaded: false,
@@ -72,6 +72,7 @@ export default class Store {
         /**
          * Modules
          */
+        this.navigation = null;
         this.scrollbar = null;
         this.lazyload = null;
         this.demo = null;

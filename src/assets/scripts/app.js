@@ -10,4 +10,5 @@ window.addEventListener('resize', () => {
 
 	window.Store.scrollbar.updateValues();
 	window.Store.scrollbar.update();
+    window.Store.navigation?.update();
 }, true);

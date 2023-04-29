@@ -14,6 +14,7 @@ import Store from './store';
 import barba from '@barba/core';
 import Loader from './base/loader';
 import Responsive from './base/responsive.js';
+import Navigation from './base/navigation';
 import Scrollbar from './base/scrollbar.js';
 import LazyLoad from 'vanilla-lazyload';
 import Demo from './base/demo';
@@ -54,6 +55,7 @@ class Lifecycle {
 
         /* init your javascript which needs to be loaded only once */
         window.Store.environment.responsive = Responsive.create();
+        window.Store.navigation = Navigation.create();
 
         this.load();
     }
@@ -97,6 +99,11 @@ class Lifecycle {
                     /* create your stunning leave animation here */
                     window.Store.environment.theHtml.classList.remove(self.settings.css_class.html.has_loaded, self.settings.css_class.html.ready);
                     window.Store.environment.theHtml.classList.add(self.settings.css_class.html.transitioning);
+
+                    /* close navigation mobile */
+                    if (window.Store.scrollbar.world.w < 1200) {
+                        window.Store.navigation.toggleNavigation('close');
+                    }
                 },
                 enter(data) {
                     /* create your amazing enter animation here */
@@ -104,6 +111,9 @@ class Lifecycle {
                         window.Store.environment.theHtml.classList.remove(self.settings.css_class.html.transitioning);
                         window.Store.environment.theHtml.classList.add(self.settings.css_class.html.ready);
                     }, window.Store.environment.transitionPageDuration);
+
+                    /* sets current page */
+    				window.Store.navigation.setCurrenPage();
                 }
             }],
             views: [{
@@ -163,7 +173,7 @@ class Lifecycle {
         }, window.Store.environment.transitionDelay);
         window.Store.lazyload = new LazyLoad({
             elements_selector: this.settings.selectors.image_lazy,
-            class_loaded: this.settings.css_class.img.loaded,
+            class_loaded: this.settings.css_class.img.loaded
         });
         window.Store.demo = Demo.init();
 
