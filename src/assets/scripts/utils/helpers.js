@@ -11,7 +11,7 @@ export function getTransitionEndEventName() {
 		"MozTransition": "transitionend",
 		"WebkitTransition": "webkitTransitionEnd"
 }
-	
+
 	let bodyStyle = document.body.style;
 	for (let transition in transitions) {
 		if (bodyStyle[transition] != undefined) {
@@ -21,7 +21,7 @@ export function getTransitionEndEventName() {
 }
 
 /**
- * Async function used on scroll event in order to not be penalized by PageSpeed Insights
+ * Async function to load recaptcha script
  * @param {boolean} force force the load
  * @returns {boolean}
  */
@@ -31,7 +31,7 @@ export async function loadRecaptcha(force = false) {
 
 	if (!window.Store.modules.recaptcha.version)
 		return false;
-	
+
 	if (window.Store.scrollbar.y <= 0 && force !== true)
 		return false;
 

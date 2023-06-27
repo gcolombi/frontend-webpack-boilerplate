@@ -6,7 +6,7 @@ export default class Navigation {
         this.states = {
             active: false,
             sticky: false,
-            visible: true,
+            visible: true
         };
         this.settings = {
             nav: {
@@ -34,7 +34,7 @@ export default class Navigation {
         if (!navigation)
             return null;
 
-        /* get elements */
+        /* Get elements */
         const burger = navigation.querySelector('.js-burger');
         const primaryNavigation = navigation.querySelector('.js-primary-nav');
         const primaryNavigationScroll = navigation.querySelector('.js-primary-nav-scroll');
@@ -44,7 +44,7 @@ export default class Navigation {
                 element: navigation,
                 primary: {
                     element: primaryNavigation,
-                    scroll: primaryNavigationScroll,
+                    scroll: primaryNavigationScroll
                 }
             },
             burger: burger
@@ -56,7 +56,7 @@ export default class Navigation {
         obj.createGroup();
         obj.setCurrenPage();
 
-        return obj
+        return obj;
     }
 
     /**
@@ -72,6 +72,9 @@ export default class Navigation {
     listener() {
         /* Burger */
         this.burger.addEventListener('click', this.toggle.bind(this));
+
+        /* Breakpoint changed */
+        document.addEventListener('breakpointChanged', this.breakpointChanged.bind(this));
     }
 
     /**
@@ -91,14 +94,14 @@ export default class Navigation {
      * @param {boolean} currentState current navigation state
      */
     toggleNavigation(currentState) {
-        /* flip the state */
-        this.states.active = !currentState
+        /* Flip the state */
+        this.states.active = !currentState;
 
         if (currentState) {
             this.nav.element.classList.remove(this.settings.nav.active);
             this.burger.classList.remove(this.settings.nav.active);
             window.Store.environment.theHtml.classList.remove(this.settings.html.active);
-            return
+            return;
         }
 
         this.nav.element.classList.add(this.settings.nav.active);
@@ -119,7 +122,7 @@ export default class Navigation {
         if (y > 0) {
             this.nav.element.classList.add(this.settings.nav.sticky);
             this.states.sticky = true;
-            return
+            return;
         }
 
         this.nav.element.classList.remove(this.settings.nav.sticky);
@@ -162,7 +165,7 @@ export default class Navigation {
      * Creates item group to set current page
      */
     createGroup() {
-        /* primary */
+        /* Primary */
         const children = this.nav.primary.element ? [...this.nav.primary.element?.children] : [];
         children.forEach(child => {
             const link = child.firstElementChild.querySelector('a');
@@ -177,7 +180,7 @@ export default class Navigation {
                     url_object: urlObj,
                     url_pathname_parsed: urlPathnameParsed,
                     states: {
-                        current: false,
+                        current: false
                     }
                 }
 
@@ -196,11 +199,11 @@ export default class Navigation {
             item.states.current = false;
         });
 
-        /* get the current url infos */
+        /* Get the current url infos */
         const currentUrl = window.location.pathname;
         const currentUrlParsed = currentUrl.replace(/\\|\//g,'');
 
-        /* set current page */
+        /* Set current page */
         this.items.forEach(item => {
             if (item.url_pathname_parsed === currentUrlParsed) {
                 item.element.classList.add(this.settings.nav.current_page);
@@ -210,12 +213,16 @@ export default class Navigation {
     }
 
     /**
-     * Update
+     * Watch breakpointChanged
+     * @param {Event} e breakpointChanged event
      */
-    update() {
-        const activeBreakpoint = window.Store.environment.responsive.activeBreakpoint.value;
-        /* close mobile navigation if bp >= 1200 */
-        if (activeBreakpoint >= 1200 && this.states.active) {
+    breakpointChanged(e) {
+        const activeBreakpoint = e.detail.activeBreakpoint;
+        let threshold = {};
+
+        /* Close mobile navigation if bp >= 1200 */
+        threshold = window.Store.environment.responsive.getBreakpoint('LG');
+        if (activeBreakpoint.value >= threshold.value && this.states.active) {
             this.toggleNavigation('close');
         }
     }

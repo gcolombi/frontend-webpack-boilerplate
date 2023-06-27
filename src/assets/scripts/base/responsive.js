@@ -2,6 +2,7 @@ export default class Responsive {
 	constructor(params) {
 		this.element = params.element;
 		this.breakpoints = params.breakpoints;
+        this.currentThreshold = this.activeBreakpoint;
 	}
 
     /**
@@ -38,19 +39,18 @@ export default class Responsive {
 	}
 
     /**
-     * Gets breakpoint value as string or number
+     * Gets breakpoint
      * @param {string} breakpoint breakpoint name e.g. 'LG'
-     * @param {boolean} asNumber pass true to retrieve breakpoint's value as number
-     * @returns {string|number} breakpoint as string or number
+     * @returns {Object} breakpoint object
      */
-	getBreakpointValue(breakpoint, asNumber = false) {
-        this.readBreakpoints();
+	getBreakpoint(breakpoint) {
+		this.readBreakpoints();
 
 		if (!this.breakpoints || !this.breakpoints.hasOwnProperty(breakpoint)) {
 			return false;
 		}
 
-		return asNumber ? parseFloat(this.breakpoints[breakpoint].value) : this.breakpoints[breakpoint].value;
+		return {name: breakpoint, value: parseFloat(this.breakpoints[breakpoint].value)};
 	}
 
     /**
@@ -73,9 +73,29 @@ export default class Responsive {
         return this.breakpoints.hasOwnProperty(breakpoint) && this.breakpoints[breakpoint].active;
 	}
 
+    /**
+	 * Dispatchs "breakpointChanged" event
+	 * @returns {boolean} true when event has been dispatched
+	 */
+	dispatchEvent() {
+		const prevBreakpoint = this.getBreakpoint(this.currentThreshold?.name) || this.activeBreakpoint;
+		const activeBreakpoint = this.activeBreakpoint;
+
+		const event = new CustomEvent('breakpointChanged', {
+			detail: {
+				prevBreakpoint: prevBreakpoint,
+				activeBreakpoint: activeBreakpoint
+			}
+		});
+
+		this.currentThreshold = this.activeBreakpoint;
+
+		return document.dispatchEvent(event);
+	}
+
 	/**
      * Removes string quotes
-     * @param {string} string 
+     * @param {string} string
      * @returns {string} string without quotes
      */
 	 static removeQuotes(string) {
@@ -96,7 +116,7 @@ export default class Responsive {
 	get activeBreakpoint() {
         this.readBreakpoints();
 
-		let activeBreakpoint = {name: false, value: 0};
+		let activeBreakpoint = {name: 'MIN', value: 0};
 
 		for (let breakpoint in this.breakpoints) {
 			if (this.breakpoints.hasOwnProperty(breakpoint)) {

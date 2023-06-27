@@ -25,8 +25,8 @@ export default class Scrollbar {
 	static create() {
 		const locomotiveScroll = new LocomotiveScroll({
 			el: window.Store.environment.theBody.querySelector('[data-scroll-container]'),
-			smooth: window.innerWidth >= window.Store.environment.responsive.getBreakpointValue('LG', true),
-			getDirection: true,
+			smooth: window.innerWidth >= window.Store.environment.responsive.getBreakpoint('LG')?.value,
+			getDirection: true
 		});
 
 		const params = {
@@ -36,7 +36,7 @@ export default class Scrollbar {
 			directionY: 0,
 			screenWidth: window.innerWidth,
 			screenHeight: window.innerHeight,
-			element: locomotiveScroll,
+			element: locomotiveScroll
 		}
 
 		const obj = new Scrollbar(params);
@@ -58,9 +58,7 @@ export default class Scrollbar {
 			if (window.Store.environment.lifeCycleReady) {
 
 				/* Put your code that needs to be watch here */
-    			loadRecaptcha();
                 window.Store.navigation?.watch(this.y);
-
 			}
 		});
 
