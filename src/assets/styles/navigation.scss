@@ -39,7 +39,7 @@
         line-height: 0;
     }
 
-    /* states */
+    /* States */
     &.is-hidden {
         transform: translate3d(0, -100%, 0) translateZ(0);
     }
@@ -54,9 +54,8 @@
     // **---------------------------------------------------**
     // MEDIA QUERIES
 
-    /* mobile */
+    /* Mobile */
     @include mediaq('<LG') {
-
         &__container {
             width: 100%;
             padding: 0 var(--half-container);
@@ -136,7 +135,7 @@
             }
         }
 
-        /* states */
+        /* States */
         &.is-open {
 
             &:before {
@@ -159,9 +158,8 @@
         }
     }
 
-    /* desktop */
+    /* Desktop */
     @include mediaq('>LG') {
-        /* General */
         --navigation-padding: 25px;
         --logo-width: 35px;
 
@@ -239,7 +237,7 @@
                                 }
                             }
 
-                            /* states */
+                            /* States */
                             &.is-current-page {
                                 --navigation-link-color: var(--secondary);
                             }
@@ -299,7 +297,7 @@
         }
     }
 
-    // state
+    /* States */
     &.is-open & {
         &__lines {
             span {
